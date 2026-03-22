@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Poteshu Extractor",
+  "version": "1.0",
+  "description": "YouTube Subtitles Extractor for Poteshu",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "*://*.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/watch*"
+      ],
+      "js": [
+        "dist/content.js"
+      ]
+    }
+  ]
+}
